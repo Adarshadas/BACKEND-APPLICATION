@@ -1,0 +1,15 @@
+{
+  "name": "chai-aur-master-backend",
+  "version": "1.0.0",
+  "description": "a complete production ready project for backend devalopment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "express"
+  ],
+  "author": "Adarsha das",
+  "license": "ISC"
+}
