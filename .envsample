@@ -1,0 +1,12 @@
+
+
+
+
+
+
+
+
+PORT=8000
+
+MONOGODB_URL=mongodb+srv://adarsha_das:Adarsha-47@cluster.w2vgel1.mongodb.net
+
