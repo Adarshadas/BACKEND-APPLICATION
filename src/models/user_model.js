@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 import jwt from "jwt";
 import bcrypt from "bcrypt";
-import {}
+// import {}
 
 const userschema = new Schema(
   {
@@ -82,13 +82,15 @@ userSchema.methords.generateAccessToken = async function(){
     watchhistory: this.watchhistory,
     refreshtoken: this.refreshtoken,
   },
-  process.env.JWT_SECRET,
-  { expiresIn: process.env.ACCESS_TOKEN_EXPIRY },
+  process.env.ACCESS_TOKEN_SECRET,
+  { 
+    expiresIn: process.env.ACCESS_TOKEN_EXPIRY
+   },
   )
 }
 
 
-userSchema.methords.generateRefreshToken = async function(){
+userSchema.methords.generateRefreshToken =  function(){
   return jwt.token(
     {
     _id: this._id,

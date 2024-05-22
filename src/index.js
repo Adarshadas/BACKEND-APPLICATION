@@ -9,22 +9,19 @@ import {DB_NAME} from "./constants/db_name";
 // writing a profession way to write a code
 
 
-dotenv.config({
-  path : './env'
-})
+// dotenv.config({
+//   path : './env'
+// })
 
 connectDB()
 .then(()=>{
-  app.listen(process.env.PORT || 3000,()=>{
+  app.listen(process.env.PORT || 8000,()=>{
     console.log(`server is runnning at port ${process.env.PORT}`);
   })
 })
 .catch((err)=>{
   console.log("MONGO db connected failed",err);
 })
-
-
-
 
 
 
