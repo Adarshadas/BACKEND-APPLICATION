@@ -11,6 +11,7 @@ const userschema = new Schema(
       unique:true,
       lowercase:true,
       index:true,
+      trim:true,
     
     },
   
@@ -19,7 +20,7 @@ const userschema = new Schema(
       required:true,
       unique:true,
       lowercase:true,
-      index:true,
+      trim:true,
     },
     fullname:{
       type:String,
@@ -71,7 +72,7 @@ userSchema.methords.ispasswordCorrect =async function(password){
 }
 
 userSchema.methords.generateAccessToken = async function(){
-   return jwt.token(
+   return jwt.sign(
     {
     _id: this._id,
     email: this.email,

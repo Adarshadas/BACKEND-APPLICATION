@@ -6,3 +6,6 @@ class Apiresponce{
     this.success=statuscode<400
   }
 }
+
+
+export {Apiresponce}
